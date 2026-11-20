@@ -1,0 +1,112 @@
+[
+  {
+    "name": "ListMetrics",
+    "api_version": "v1",
+    "description": "查询指标列表（只读查询）"
+  },
+  {
+    "name": "ShowMetricData",
+    "api_version": "v1",
+    "description": "查询监控数据（只读查询）"
+  },
+  {
+    "name": "BatchListMetricData",
+    "api_version": "v1",
+    "description": "批量查询监控数据（只读查询）"
+  },
+  {
+    "name": "ListAlarms",
+    "api_version": "v1",
+    "description": "查询告警规则列表（只读查询）"
+  },
+  {
+    "name": "ShowAlarm",
+    "api_version": "v1",
+    "description": "查询单条告警规则信息（只读查询）"
+  },
+  {
+    "name": "ListEvents",
+    "api_version": "v1",
+    "description": "查询事件监控列表（只读查询）"
+  },
+  {
+    "name": "ListEventDetail",
+    "api_version": "v1",
+    "description": "查询某一事件监控详情（只读查询）"
+  },
+  {
+    "name": "ShowEventData",
+    "api_version": "v1",
+    "description": "查询主机配置数据（只读查询）"
+  },
+  {
+    "name": "ListResourceGroup",
+    "api_version": "v1",
+    "description": "查询所有资源分组（只读查询）"
+  },
+  {
+    "name": "ListAlarmRules",
+    "api_version": "v2",
+    "description": "查询告警规则列表(推荐)（只读查询）"
+  },
+  {
+    "name": "ListAlarmHistories",
+    "api_version": "v2",
+    "description": "查询告警记录列表（只读查询）"
+  },
+  {
+    "name": "ListAlarmRulePolicies",
+    "api_version": "v2",
+    "description": "查询告警规则策略列表（只读查询）"
+  },
+  {
+    "name": "ListAlarmRuleResources",
+    "api_version": "v2",
+    "description": "查询告警规则资源列表（只读查询）"
+  },
+  {
+    "name": "ListAlarmTemplates",
+    "api_version": "v2",
+    "description": "查询告警模板列表（只读查询）"
+  },
+  {
+    "name": "ShowAlarmTemplate",
+    "api_version": "v2",
+    "description": "查询告警模板详情（只读查询）"
+  },
+  {
+    "name": "ListResourceGroups",
+    "api_version": "v2",
+    "description": "查询资源分组列表（只读查询）"
+  },
+  {
+    "name": "ShowResourceGroup",
+    "api_version": "v2",
+    "description": "查询指定资源分组详情（只读查询）"
+  },
+  {
+    "name": "ListDashboardInfos",
+    "api_version": "v2",
+    "description": "查询监控看板列表（只读查询）"
+  },
+  {
+    "name": "ListDashboardWidgets",
+    "api_version": "v2",
+    "description": "查询指定监控看板下的监控视图列表（只读查询）"
+  },
+  {
+    "name": "ShowWidget",
+    "api_version": "v2",
+    "description": "查询指定监控视图信息（只读查询）"
+  },
+  {
+    "name": "ListNotificationMasks",
+    "api_version": "v2",
+    "description": "查询告警通知屏蔽列表（只读查询）"
+  },
+  {
+    "name": "ListNotificationMaskResources",
+    "api_version": "v2",
+    "description": "查询告警通知屏蔽资源列表（只读查询）"
+  }
+]

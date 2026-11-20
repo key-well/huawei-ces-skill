@@ -1,0 +1,1199 @@
+[
+  {
+    "name": "ListMetrics",
+    "api_version": "v1",
+    "sdk_method": "list_metrics",
+    "request_class": "ListMetricsRequest",
+    "description": "查询指标列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "namespace": {
+          "type": "string",
+          "description": "**参数解释** 服务命名空间，样例：弹性云服务器的命名空间为SYS.ECS。 各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制** 不涉及 **取值范围** 格式为service.item，service和item以点号拼接组成。 service和item必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_），长度为[3,32]个字符 **默认取值** 不涉及"
+        },
+        "metric_name": {
+          "type": "string",
+          "description": "**参数解释** 资源的监控指标名称，样例：弹性云服务器监控指标中的cpu_util。 各服务资源的指标名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** 必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符 （-），长度为[1,96]个字符 **默认取值** 不涉及"
+        },
+        "dim_0": {
+          "type": "string",
+          "description": "**参数解释** 指标的第一个维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.0&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_1": {
+          "type": "string",
+          "description": "**参数解释** 指标的第二个维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.1&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_2": {
+          "type": "string",
+          "description": "**参数解释** 指标的第三个维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.2&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_3": {
+          "type": "string",
+          "description": "**参数解释** 指标的第四个维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.3&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "start": {
+          "type": "string",
+          "description": "**参数解释** 分页起始值，格式为：namespace.metric_name.key:value 例如：start&#x3D;SYS.ECS.cpu_util.instance_id:d9112af5-6913-4f3b-bd0a-3f96711e004d **约束限制** 不涉及 **取值范围** 首次传空字符串，后续请求传递上一页返回值内的marker字段，作为下一页请求的分页起始值 **默认取值** 不涉及"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** 条数限制为[1,1000] **默认取值** 1000"
+        },
+        "order": {
+          "type": "string",
+          "description": "**参数解释** 用于标识结果的排序方法 **约束限制** 不涉及 **取值范围** 枚举值： - asc 升序 - desc 降序 **默认取值** asc"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowMetricData",
+    "api_version": "v1",
+    "sdk_method": "show_metric_data",
+    "request_class": "ShowMetricDataRequest",
+    "description": "查询监控数据（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "namespace": {
+          "type": "string",
+          "description": "**参数解释** 服务命名空间，样例：弹性云服务器的命名空间为SYS.ECS。 各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **约束限制** 不涉及 **取值范围** 格式为service.item，service和item以点号拼接组成。 service和item必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_），长度为[3,32]个字符 **默认取值** 不涉及"
+        },
+        "metric_name": {
+          "type": "string",
+          "description": "**参数解释** 资源的监控指标名称，样例：弹性云服务器监控指标中的cpu_util。 各服务资源的指标名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档 **约束限制** 不涉及 **取值范围** 必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符 （-），长度为[1,96]个字符 **默认取值** 不涉及"
+        },
+        "dim_0": {
+          "type": "string",
+          "description": "**参数解释** 指标的第一层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.0&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_1": {
+          "type": "string",
+          "description": "**参数解释** 指标的第二层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.1&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_2": {
+          "type": "string",
+          "description": "**参数解释** 指标的第三层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档 **约束限制** 不涉及 **取值范围** dim.2&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_3": {
+          "type": "string",
+          "description": "**参数解释** 指标的第四层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档 **约束限制** 不涉及 **取值范围** dim.3&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "filter": {
+          "type": "string",
+          "description": "**参数解释** 聚合方式 **约束限制** 不涉及 **取值范围** 枚举值： - average 平均值 - variance 方差 - min 最小值 - max 最大值 - sum 求和值 **默认取值** 不涉及"
+        },
+        "period": {
+          "type": "integer",
+          "description": "**参数解释** 监控数据的聚合粒度，聚合解释可查看：“[[聚合含义](https://support.huaweicloud.com/ces_faq/ces_faq_0009.html)](tag:hc)[[聚合含义](https://support.huaweicloud.com/intl/zh-cn/ces_faq/ces_faq_0009.html)](tag:hk)[[聚合含义](https://support.huaweicloud.com/eu/ces_faq/ces_faq_0009.html)](tag:hws_eu)[[聚合含义](https://docs.otc.t-systems.com/usermanual/ces/ces_faq_0009.html)](tag:dt,dt_test)[《云监控服务用户指南》中“什么是聚合？”章节](tag:ax,cmcc,ctc,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)”。 **约束限制** 不涉及 **取值范围** 枚举值： - 1 监控资源的实时数据 - 60 聚合1分钟粒度数据，表示1分钟一个数据点 - 300 聚合5分钟粒度数据，表示5分钟一个数据点 - 1200 聚合20分钟粒度数据，表示20分钟一个数据点 - 3600 聚合1小时粒度数据，表示1小时一个数据点 - 14400 聚合4小时粒度数据，表示4小时一个数据点 - 86400 聚合1天粒度数据，表示1天一个数据点 **默认取值** 不涉及"
+        },
+        "_from": {
+          "type": "integer",
+          "description": "**参数解释** 查询数据起始时间，UNIX时间戳，单位毫秒。建议from的值相对于当前时间向前偏移至少1个周期。由于聚合运算的过程是将一个聚合周期范围内的数据点聚合到周期起始边界上，如果将from和to的范围设置在聚合周期内，会因为聚合未完成而造成查询数据为空，所以建议from参数相对于当前时间向前偏移至少1个周期。以5分钟聚合周期为例：假设当前时间点为10:35，10:30~10:35之间的原始数据会被聚合到10:30这个点上，所以查询5分钟数据点时from参数应为10:30或之前。云监控会根据所选择的聚合粒度向前取整from参数；如：1607146998177。 **约束限制** 不涉及 **取值范围** 毫秒级时间戳，范围为[1111111111111,9999999999999] **默认取值** 不涉及"
+        },
+        "to": {
+          "type": "integer",
+          "description": "**参数解释** 查询数据截止时间UNIX时间戳，单位毫秒 **约束限制** from必须小于to **取值范围** 毫秒级时间戳，范围为[1111111111111,9999999999999] **默认取值** 不涉及"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "namespace",
+        "metric_name",
+        "dim_0",
+        "filter",
+        "period",
+        "_from",
+        "to"
+      ]
+    }
+  },
+  {
+    "name": "BatchListMetricData",
+    "api_version": "v1",
+    "sdk_method": "batch_list_metric_data",
+    "request_class": "BatchListMetricDataRequest",
+    "description": "批量查询监控数据（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "metrics": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "namespace": {
+                    "type": "string",
+                    "description": "**参数解释** 服务命名空间，样例：弹性云服务器的命名空间为SYS.ECS。 各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制** 不涉及 **取值范围** 格式为service.item，service和item以点号拼接组成。 service和item必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_），长度为[3,32]个字符 **默认取值** 不涉及"
+                  },
+                  "metric_name": {
+                    "type": "string",
+                    "description": "**参数解释**： 指标ID，例如弹性云服务器的监控指标CPU使用率，对应的metric_name为cpu_util。各服务资源的指标名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-；如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。字符串长度为[1,96]。 **默认取值**： 不涉及。"
+                  },
+                  "dimensions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "**参数解释** 资源维度，如：弹性云服务器，则维度为instance_id；目前最大支持4个维度，各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "**参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及"
+                        }
+                      },
+                      "additionalProperties": false,
+                      "required": [
+                        "name",
+                        "value"
+                      ]
+                    },
+                    "description": "**参数解释** 指标维度 **约束限制** 包含的指标维度对象个数为[1,4]"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "namespace",
+                  "metric_name",
+                  "dimensions"
+                ]
+              },
+              "description": "**参数解释** 指标数据 **约束限制** 包含的指标数据对象个数为[1,500]"
+            },
+            "period": {
+              "type": "string",
+              "enum": [
+                "1",
+                "60",
+                "300",
+                "1200",
+                "3600",
+                "14400",
+                "86400"
+              ]
+            },
+            "filter": {
+              "type": "string",
+              "enum": [
+                "average",
+                "variance",
+                "min",
+                "max",
+                "sum"
+              ]
+            },
+            "_from": {
+              "type": "integer",
+              "description": "**参数解释** 查询数据起始时间，UNIX时间戳，单位毫秒 **约束限制** 当period为1时，若(to- from) &gt;4*3600*1000，则from调整为 to - 4*3600*1000 当period为300时，若(to - from) &gt;24*3600*1000，则from调整为 to - 24*3600*1000 当period为1200时，若(to - from) &gt;3*24*3600*1000，则from调整为 to - 3*24*3600*1000 当period为3600时，若(to -from) &gt; 10*24*3600*1000，则from调整为 to -10*24*3600*1000 当period为14400时，若(to - from) &gt;30*24*3600*1000，则from调整为 to - 30*24*3600*1000 当period为86400时，若(to -from) &gt; 180*24*3600*1000，则from调整为 to - 180*24*3600*1000 **取值范围** 毫秒级时间戳范围为[1111111111111,9999999999999] **默认取值** 不涉及"
+            },
+            "to": {
+              "type": "integer",
+              "description": "**参数解释** 查询数据截止时间，UNIX时间戳，单位毫秒 **约束限制** from 必须小于to **取值范围** 毫秒级时间戳范围为[1111111111111,9999999999999] **默认取值** 不涉及"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "metrics",
+            "period",
+            "filter",
+            "_from",
+            "to"
+          ],
+          "description": "Body of the BatchListMetricDataRequest"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "body"
+      ]
+    }
+  },
+  {
+    "name": "ListAlarms",
+    "api_version": "v1",
+    "sdk_method": "list_alarms",
+    "request_class": "ListAlarmsRequest",
+    "description": "查询告警规则列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "start": {
+          "type": "string",
+          "description": "**参数解释**： 分页起始值，内容为alarm_id **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位字母或数字。字符长度为24 **默认取值**： 不涉及。"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 取值范围(0,100] **默认取值**： 默认值为100"
+        },
+        "order": {
+          "type": "string",
+          "description": "**参数解释**： 用于标识结果排序方法，按创建时间排序。 **约束限制**： 不涉及 **取值范围**： 枚举值： - asc：升序 - desc：降序 **默认取值**： desc"
+        },
+        "enterprise_project_id": {
+          "type": "string",
+          "description": "**参数解释**： 企业项目ID，当查询所有企业项目时，配置为：all_granted_eps。 当需要查询某个企业项目时，配置为对应的企业项目ID，请参考获[[获取项目ID](https://support.huaweicloud.com/api-ces/ces_03_0057.html)](tag:hc)[[获取项目ID](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0057.html)](tag:hk)[[获取项目ID](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0057.html)](tag:hws_eu)[[获取项目ID](ces_03_0057.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，长度为36个字符。也可取值0或all_granted_eps。0：代表默认企业项目ID，all_granted_eps：代表所有企业项目ID。 **默认取值**： all_granted_eps"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowAlarm",
+    "api_version": "v1",
+    "sdk_method": "show_alarm",
+    "request_class": "ShowAlarmRequest",
+    "description": "查询单条告警规则信息（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "alarm_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则ID， **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位由字母或数字组成的字符串。长度为24个字符。 **默认取值**： 不涉及。"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "alarm_id"
+      ]
+    }
+  },
+  {
+    "name": "ListEvents",
+    "api_version": "v1",
+    "sdk_method": "list_events",
+    "request_class": "ListEventsRequest",
+    "description": "查询事件监控列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "event_type": {
+          "type": "string",
+          "description": "**参数解释** 事件类型 **约束限制** 不涉及 **取值范围** 枚举值： - EVENT.SYS 系统事件 - EVENT.CUSTOM 自定义事件 **默认取值** 不涉及"
+        },
+        "sub_event_type": {
+          "type": "string",
+          "description": "**参数解释** 事件子类型 **约束限制** 不涉及 **取值范围** 枚举值： - SUB_EVENT.OPS 运维事件 - SUB_EVENT.PLAN 计划事件 - SUB_EVENT.CUSTOM 自定义事件 **默认取值** 不涉及"
+        },
+        "event_name": {
+          "type": "string",
+          "description": "**参数解释** 事件名称，值为系统产生的事件名称，或用户自定义上报的事件名称 **约束限制** 不涉及 **取值范围** 必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_），长度为[1,64]个字符 **默认取值** 不涉及"
+        },
+        "_from": {
+          "type": "integer",
+          "description": "**参数解释** 查询数据起始时间，UNIX时间戳，单位毫秒 **约束限制** 不涉及 **取值范围** 毫秒级时间戳，范围为[1111111111111,9999999999999] **默认取值** 不涉及"
+        },
+        "to": {
+          "type": "integer",
+          "description": "**参数解释** 查询数据截止时间，UNIX时间戳，单位毫秒 **约束限制** from必须小于to **取值范围** 毫秒级时间戳，范围为[1111111111111,9999999999999] **默认取值** 不涉及"
+        },
+        "start": {
+          "type": "string",
+          "description": "**参数解释** 分页起始值 **约束限制** 不涉及 **取值范围** 非负整数 **默认取值** 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释** 单次查询的条数限制 **约束限制** 不涉及 **取值范围** 条数限制为[1,100] **默认取值** 100"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListEventDetail",
+    "api_version": "v1",
+    "sdk_method": "list_event_detail",
+    "request_class": "ListEventDetailRequest",
+    "description": "查询某一事件监控详情（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "event_name": {
+          "type": "string",
+          "description": "**参数解释**： 事件名称，值为系统产生的事件名称或用户自定义上报的事件名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,64]个字符。 **默认取值**： 不涉及。"
+        },
+        "event_type": {
+          "type": "string",
+          "description": "**参数解释**： 事件类型。 **约束限制**： 不涉及。 **取值范围**： 值为EVENT.SYS或EVENT.CUSTOM。 - EVENT.SYS：系统事件。 - EVENT.CUSTOM：自定义事件。 **默认取值**： 不涉及。"
+        },
+        "sub_event_type": {
+          "type": "string",
+          "description": "**参数解释**： 事件子类。 **约束限制**： 不涉及。 **取值范围**： 枚举类型 - SUB_EVENT.OPS: 运维事件 - SUB_EVENT.PLAN: 计划事件 - SUB_EVENT.CUSTOM: 自定义事件 **默认取值**： 不涉及。"
+        },
+        "event_source": {
+          "type": "string",
+          "description": "**参数解释**： 事件来源，取值为各云服务的命名空间。云服务的命名空间请参考“[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)”。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,32]个字符。 正则匹配：以字母开头，中间有一个点，包含字母、数字、下划线的字符串。 **默认取值**： 不涉及。"
+        },
+        "event_level": {
+          "type": "string",
+          "description": "**参数解释**： 事件的级别。 **约束限制**： 不涉及。 **取值范围**： 值为Critical、Major、Minor、Info。 - Critical: 紧急 - Major: 重要 - Minor: 次要 - Info: 提示 **默认取值**： 不涉及。"
+        },
+        "event_user": {
+          "type": "string",
+          "description": "**参数解释**： 上报事件监控数据时用户的名称，也可为projectID。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 正则匹配：由零个或多个字母、数字、下划线、横线、斜杠、空格、@ 符号或点号组成的字符串。 **默认取值**： 不涉及。"
+        },
+        "event_state": {
+          "type": "string",
+          "description": "**参数解释**： 事件的状态。 **约束限制**： 不涉及。 **取值范围**： 值为normal、warning、incident。 - normal: 正常 - warning: 警告 - incident: 故障 **默认取值**： 不涉及。"
+        },
+        "_from": {
+          "type": "integer",
+          "description": "**参数解释**： 查询数据起始时间，UNIX时间戳，单位毫秒。例如：1605952700911。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。"
+        },
+        "to": {
+          "type": "integer",
+          "description": "**参数解释**： 查询数据截止时间，UNIX时间戳，单位毫秒。 **约束限制**： 其中from必须小于to。 **取值范围**： 不涉及。 **默认取值**： 不涉及。"
+        },
+        "start": {
+          "type": "integer",
+          "description": "**参数解释**： 分页起始值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 单次查询的条数限制，用于限制结果数据条数。 **约束限制**： 不涉及。 **取值范围**： 大小为[1,100]的整数 **默认取值**： 100"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "event_name",
+        "event_type"
+      ]
+    }
+  },
+  {
+    "name": "ShowEventData",
+    "api_version": "v1",
+    "sdk_method": "show_event_data",
+    "request_class": "ShowEventDataRequest",
+    "description": "查询主机配置数据（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "namespace": {
+          "type": "string",
+          "description": "**参数解释** 服务命名空间，样例：弹性云服务器的命名空间为SYS.ECS。 各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制** 不涉及 **取值范围** 格式为service.item，service和item以点号拼接组成。 service和item必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_），长度为[3,32]个字符 **默认取值** 不涉及"
+        },
+        "dim_0": {
+          "type": "string",
+          "description": "**参数解释** 指标的第一层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.0&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_1": {
+          "type": "string",
+          "description": "**参数解释** 指标的第二层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** dim.1&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_2": {
+          "type": "string",
+          "description": "**参数解释** 指标的第三层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档 **约束限制** 不涉及 **取值范围** dim.2&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "dim_3": {
+          "type": "string",
+          "description": "**参数解释** 指标的第四层维度，目前最多支持4个维度，维度格式为dim.{i}&#x3D;key,value。样例：instance_id,6f3c6f91-4b24-4e1b-b7d1-a94ac1cb011d 各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档 **约束限制** 不涉及 **取值范围** dim.3&#x3D;key,value，由key、value以逗号拼接组成。 key必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,32]个字符 value由多个字母（大写或小写）、数字、下划线（_）、连字符（-）、点（.）、斜杠（/）、井号（#）、英文左括号（(）、英文右括号（)）组合而成，首个字符可以包含星号（*），但不能以连字符（-）开头，长度为[1,256]个字符 **默认取值** 不涉及"
+        },
+        "type": {
+          "type": "string",
+          "description": "**参数解释** 事件类型 **约束限制** 不涉及 **取值范围** 必须以字母（大写或小写）开头，后面可以跟零个或多个字母（大写或小写）、数字、下划线（_）、连字符（-），长度为[1,64]个字符 **默认取值** 不涉及"
+        },
+        "_from": {
+          "type": "integer",
+          "description": "**参数解释** 查询数据起始时间，UNIX时间戳，单位毫秒 **约束限制** 不涉及 **取值范围** 毫秒级时间戳，范围为[0,9999999999999] **默认取值** 不涉及"
+        },
+        "to": {
+          "type": "integer",
+          "description": "**参数解释** 查询数据截止时间,UNIX时间戳，单位毫秒 **约束限制** from必须小于to **取值范围** 毫秒级时间戳，范围为[0,9999999999999] **默认取值** 不涉及"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "namespace",
+        "dim_0",
+        "type",
+        "_from",
+        "to"
+      ]
+    }
+  },
+  {
+    "name": "ListResourceGroup",
+    "api_version": "v1",
+    "sdk_method": "list_resource_group",
+    "request_class": "ListResourceGroupRequest",
+    "description": "查询所有资源分组（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_name": {
+          "type": "string",
+          "description": "**参数解释** 资源分组名称。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。"
+        },
+        "group_id": {
+          "type": "string",
+          "description": "**参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\\&quot;rg\\&quot;开头，后面跟着22个字母或数字。 **默认取值** 不涉及。"
+        },
+        "status": {
+          "type": "string",
+          "description": "**参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示无告警 - unhealth: 表示告警中 - no_alarm_rule: 表示未设置告警规则 **默认取值** 不涉及。"
+        },
+        "start": {
+          "type": "integer",
+          "description": "**参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,9999999]区间内。 **默认取值** 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释** 单次查询的条数限制。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListAlarmRules",
+    "api_version": "v2",
+    "sdk_method": "list_alarm_rules",
+    "request_class": "ListAlarmRulesRequest",
+    "description": "查询告警规则列表(推荐)（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "alarm_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。"
+        },
+        "name": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 只能包含0-9/a-z/A-Z/_/-或汉字，长度为[1,128]个字符。          **默认取值**： 不涉及。"
+        },
+        "namespace": {
+          "type": "string",
+          "description": "**参数解释**： 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度在 0 到 32个字符之间。           **默认取值**： 不涉及。"
+        },
+        "resource_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。 长度为[0,700]个字符。        **默认取值**： 不涉及。"
+        },
+        "enterprise_project_id": {
+          "type": "string",
+          "description": "**参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。"
+        },
+        "product_name": {
+          "type": "string",
+          "description": "**参数解释**： 资源所属的云产品名称，一般由\\&quot;服务命名空间,服务首层维度名称\\&quot;组成，如\\&quot;SYS.ECS,instance_id\\&quot;。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。        **默认取值**： 不涉及。"
+        },
+        "resource_level": {
+          "type": "string",
+          "description": "**参数解释**： 创建告警规则，需要指定的资源层级。resource_level取值为product即为云产品类型，不填或者取值为dimension则为子维度类型。          **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：云产品。 - dimension：子维度。 **默认取值**： 不涉及。"
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： [0,10000]           **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： [1,100]           **默认取值**： 10"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListAlarmHistories",
+    "api_version": "v2",
+    "sdk_method": "list_alarm_histories",
+    "request_class": "ListAlarmHistoriesRequest",
+    "description": "查询告警记录列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "alarm_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "**参数解释**： 告警ID列表。告警ID：以al开头，后跟22位由字母或数字组成的字符串。 **约束限制**： 列表最大长度为50。"
+        },
+        "record_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警流水号。优化告警流水号生成规则，由之前的 ah1655717086704DEnBrJ999 更改为 ah251222T092004SAD2yARym **约束限制**： 不涉及。 **取值范围**： 以ah开头，后跟22位由字母或数字组成的字符串，字符串长度为24。 **默认取值**： 不涉及。"
+        },
+        "name": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则名称。 **约束限制**： 不涉及。 **取值范围**： 最大128字符长度。 **默认取值**： 不涉及。"
+        },
+        "status": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "**参数解释**： 告警规则状态列表。 **取值范围**： 告警规则状态：枚举值。 - ok：已解决 - alarm：告警中 - invalid：已失效 - insufficient_data: 数据不足 - ok_manual: 已解决（手动） **约束限制**： 包含的告警规则状态对象数量为[0,3]"
+        },
+        "level": {
+          "type": "integer",
+          "description": "**参数解释**： 告警级别。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - 1：紧急 - 2：重要 - 3：次要 - 4：提示 **默认取值**： 不涉及。"
+        },
+        "namespace": {
+          "type": "string",
+          "description": "**参数解释**： 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。"
+        },
+        "resource_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警资源ID。 **约束限制**： 不涉及。 **取值范围**： 多维度情况按字母升序排列并使用逗号分隔。长度为[0,2048]个字符。 **默认取值**： 不涉及。"
+        },
+        "_from": {
+          "type": "string",
+          "description": "**参数解释**： 查询告警记录的起始更新时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 **默认取值**： 不涉及。"
+        },
+        "to": {
+          "type": "string",
+          "description": "**参数解释**： 查询告警记录的截止更新时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 **默认取值**： 不涉及。"
+        },
+        "alarm_type": {
+          "type": "string",
+          "description": "**参数解释**： 告警类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值 - event: 查询事件类型告警 - metric: 查询指标类型告警。 **默认取值**： 不涉及。"
+        },
+        "create_time_from": {
+          "type": "string",
+          "description": "**参数解释**： 查询告警记录的起始创建时间，例如：2022-02-10T10:05:46+08:00。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 **默认取值**： 不涉及。"
+        },
+        "create_time_to": {
+          "type": "string",
+          "description": "**参数解释**： 查询告警记录的截止创建时间，例如：2022-02-10T10:05:47+08:00。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,64]个字符。 **默认取值**： 不涉及。"
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为0，最大值为1000000000 **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 整数，最小值为1，最大值为100 **默认取值**： 100"
+        },
+        "order_by": {
+          "type": "string",
+          "description": "**参数解释**： 按关键字排序。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - first_alarm_time: 告警产生时间 - update_time: 更新时间 - alarm_level: 告警级别 - record_id: 表记录主键 **默认取值**： update_time"
+        },
+        "mask_status": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则屏蔽状态 **约束限制**： 不涉及。 **取值范围**： - UN_MASKED 活跃告警 - MASKED 屏蔽告警 **默认取值**： 不涉及"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListAlarmRulePolicies",
+    "api_version": "v2",
+    "sdk_method": "list_alarm_rule_policies",
+    "request_class": "ListAlarmRulePoliciesRequest",
+    "description": "查询告警规则策略列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "alarm_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则ID。     **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22个数字或字母。字符长度为24 **默认取值**： 不涉及。"
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 0-10000 **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 1-100 **默认取值**： 10"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "alarm_id"
+      ]
+    }
+  },
+  {
+    "name": "ListAlarmRuleResources",
+    "api_version": "v2",
+    "sdk_method": "list_alarm_rule_resources",
+    "request_class": "ListAlarmRuleResourcesRequest",
+    "description": "查询告警规则资源列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "alarm_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警规则ID。 **约束限制**： 不涉及。 **取值范围**： 以al开头，后跟22位的字母或数字。          **默认取值**： 不涉及。"
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量。 **约束限制**： 不涉及。 **取值范围**： 最小值为0，最大值为10000。 **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页大小。 **约束限制**： 不涉及。 **取值范围**： 最小值为1，最大值为100。 **默认取值**： 10"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "alarm_id"
+      ]
+    }
+  },
+  {
+    "name": "ListAlarmTemplates",
+    "api_version": "v2",
+    "sdk_method": "list_alarm_templates",
+    "request_class": "ListAlarmTemplatesRequest",
+    "description": "查询告警模板列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100"
+        },
+        "namespace": {
+          "type": "string",
+          "description": "**参数解释**： 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。"
+        },
+        "dim_name": {
+          "type": "string",
+          "description": "**参数解释**： 资源维度名称。 **约束限制**： 不涉及。 **取值范围**： 多维度用\\&quot;,\\&quot;分隔，只能包含0-9、a-z、A-Z、_、-、#、/、(、)，每个维度的最大长度为32。字符串总长度最小为1，最大为131。 **默认取值**： 不涉及。"
+        },
+        "template_type": {
+          "type": "string",
+          "description": "**参数解释**： 模板类型。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - system：默认指标模板。 - custom： 自定义指标模板。    - system_event： 默认事件模板。 - custom_event： 自定义事件模板。    - system_custom_event： 全部事件模板。     **默认取值**： 不传返回全部指标模板。"
+        },
+        "template_name": {
+          "type": "string",
+          "description": "告警模板的名称，以字母或汉字开头，可包含字母、数字、汉字、_、-，长度范围[1,128]，支持模糊匹配"
+        },
+        "product_name": {
+          "type": "string",
+          "description": "**参数解释**： 产品层级跨维规则创建时需要指明的规则产品名称，一般由\\&quot;服务命名空间,服务首层维度名称\\&quot;组成，如\\&quot;SYS.ECS,instance_id\\&quot;。 **约束限制**： 不涉及。 **取值范围**： 长度为[0,128]个字符。          **默认取值**： 不涉及。"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowAlarmTemplate",
+    "api_version": "v2",
+    "sdk_method": "show_alarm_template",
+    "request_class": "ShowAlarmTemplateRequest",
+    "description": "查询告警模板详情（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "template_id": {
+          "type": "string",
+          "description": "**参数解释**： 告警模板的ID。     **约束限制**： 不涉及。 **取值范围**： 以at开头，后跟字母、数字，长度为[2,64]个字符。           **默认取值**： 不涉及。"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "template_id"
+      ]
+    }
+  },
+  {
+    "name": "ListResourceGroups",
+    "api_version": "v2",
+    "sdk_method": "list_resource_groups",
+    "request_class": "ListResourceGroupsRequest",
+    "description": "查询资源分组列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "enterprise_project_id": {
+          "type": "string",
+          "description": "**参数解释**: 归属企业项目ID。 **约束限制**: 不涉及。 **取值范围**: 只能包含小写字母、数字、“-”、“_”，长度为36个字符。或者为0（代表默认企业项目ID），或者为all_granted_eps（代表所有企业项目ID）。 **默认取值**: 不涉及。"
+        },
+        "group_name": {
+          "type": "string",
+          "description": "**参数解释** 资源分组名称，支持模糊查询。 **约束限制** 不涉及。 **取值范围** 包含字母、数字、_、-或汉字，长度为[1,128]个字符。 **默认取值** 不涉及。"
+        },
+        "group_id": {
+          "type": "string",
+          "description": "**参数解释** 资源分组ID。 **约束限制** 不涉及。 **取值范围** 以\\&quot;rg\\&quot;开头，后跟22位由字母或数字组成的字符串。 **默认取值** 不涉及。"
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释** 分页起始值。 **约束限制** 不涉及。 **取值范围** 在[0,10000]区间内。 **默认取值** 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释** 分页查询时每页的条目数。 **约束限制** 不涉及。 **取值范围** 在[1,100]区间内。 **默认取值** 100"
+        },
+        "type": {
+          "type": "string",
+          "description": "**参数解释** 资源分组添加资源方式，不传代表查询所有资源分组类型。 **约束限制** 不涉及。 **取值范围** - EPS: 表示匹配企业项目 - TAG: 表示匹配标签 - Manual: 表示手动添加 - COMB: 表示组合匹配 - NAME: 表示匹配实例名称 **默认取值** 不涉及。"
+        },
+        "status": {
+          "type": "string",
+          "description": "**参数解释** 资源分组健康状态。 **约束限制** 不涉及。 **取值范围** - health: 表示无告警 - unhealthy: 表示告警中 - no_alarm_rule: 表示未设置告警规则 **默认取值** 不涉及。"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ShowResourceGroup",
+    "api_version": "v2",
+    "sdk_method": "show_resource_group",
+    "request_class": "ShowResourceGroupRequest",
+    "description": "查询指定资源分组详情（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "group_id": {
+          "type": "string",
+          "description": "**参数解释** 资源分组ID。 **约束限制** 不涉及 **取值范围** 以\\&quot;rg\\&quot;开头，后面跟着22个字母或数字 **默认取值** 不涉及"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "group_id"
+      ]
+    }
+  },
+  {
+    "name": "ListDashboardInfos",
+    "api_version": "v2",
+    "sdk_method": "list_dashboard_infos",
+    "request_class": "ListDashboardInfosRequest",
+    "description": "查询监控看板列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "enterprise_id": {
+          "type": "string",
+          "description": "**参数解释**： 企业项目ID。 **约束限制**： 不涉及。 **取值范围**： 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID），all_granted_eps（代表所有企业项目ID）。           **默认取值**： 不涉及。"
+        },
+        "is_favorite": {
+          "type": "boolean",
+          "description": "**参数解释**： 指定企业项目下监控看板是否收藏。 **约束限制**： 填此参数时，enterprise_id必填。 **取值范围**： - true:收藏 - false:未收藏          **默认取值**： 不涉及。"
+        },
+        "dashboard_name": {
+          "type": "string",
+          "description": "**参数解释**： 监控看板名称。 **约束限制**： 不涉及。 **取值范围**： 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-          **默认取值**： 不涉及。"
+        },
+        "dashboard_id": {
+          "type": "string",
+          "description": "**参数解释**： 监控看板id。 **约束限制**： 不涉及。 **取值范围**： 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**： 不涉及。"
+        },
+        "dashboard_type": {
+          "type": "string",
+          "description": "**参数解释**： 监控看板类型。 **约束限制**： 不涉及。 **取值范围**： - monitor_dashboard:表示监控大盘 - other:表示自定义看板 **默认取值**： 不涉及。"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "ListDashboardWidgets",
+    "api_version": "v2",
+    "sdk_method": "list_dashboard_widgets",
+    "request_class": "ListDashboardWidgetsRequest",
+    "description": "查询指定监控看板下的监控视图列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "dashboard_id": {
+          "type": "string",
+          "description": "**参数解释**: 监控看板id **约束限制**: 不涉及。 **取值范围**: 以db开头，包含22个字母和数字，长度为24个字符 **默认取值**: 不涉及。"
+        },
+        "group_id": {
+          "type": "string",
+          "description": "**参数解释**: 视图所在的分组id **约束限制**: 不涉及。 **取值范围**: 字符串必须以dg开头，后跟22个字母和数字，总长度为24个字符或者为default，default代表不分组 **默认取值**: 不涉及。"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "dashboard_id"
+      ]
+    }
+  },
+  {
+    "name": "ShowWidget",
+    "api_version": "v2",
+    "sdk_method": "show_widget",
+    "request_class": "ShowWidgetRequest",
+    "description": "查询指定监控视图信息（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "widget_id": {
+          "type": "string",
+          "description": "**参数解释**: 监控视图id。 **约束限制**: 不涉及。 **取值范围**: 字符串必须以wg开头，包含22个字母和数字，长度为24个字符。 **默认取值**: 不涉及。"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "widget_id"
+      ]
+    }
+  },
+  {
+    "name": "ListNotificationMasks",
+    "api_version": "v2",
+    "sdk_method": "list_notification_masks",
+    "request_class": "ListNotificationMasksRequest",
+    "description": "查询告警通知屏蔽列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100"
+        },
+        "sort_key": {
+          "type": "string",
+          "description": "**参数解释**： 排序关键字，与sort_dir同时使用。 **约束限制**： 目前只支持create_time与update_time **取值范围**： - create_time：按创建时间排序 - update_time：按修改时间排序 **默认取值**： 不涉及。"
+        },
+        "sort_dir": {
+          "type": "string",
+          "description": "**参数解释**： 排序顺序，与sort_key同时使用。 **约束限制**： 不涉及。 **取值范围**： - DESC：降序排序。 - ASC：升序排序。 **默认取值**： 不涉及。"
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "relation_type": {
+              "type": "string",
+              "enum": [
+                "ALARM_RULE",
+                "RESOURCE",
+                "RESOURCE_POLICY_NOTIFICATION",
+                "RESOURCE_POLICY_ALARM",
+                "DEFAULT"
+              ]
+            },
+            "relation_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "**参数解释**： 关联编号（目前是告警规则ID）。 **约束限制**： 包含的关联编号数量最多不超过100个，最少为0个。"
+            },
+            "metric_name": {
+              "type": "string",
+              "description": "**参数解释**： 资源的监控指标名称，各服务资源的指标名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制**： 不涉及。 **取值范围**： 必须以字母开头，只能包含0-9/a-z/A-Z/_/-。字符长度最短为1，最大为96。如：弹性云服务器中的监控指标cpu_util，表示弹性服务器的CPU使用率；文档数据库中的指标mongo001_command_ps，表示command执行频率。         **默认取值**： 不涉及。"
+            },
+            "resource_level": {
+              "type": "string",
+              "description": "**参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： - product: 云产品   - dimension: 子维度 **默认取值**： 不涉及。"
+            },
+            "mask_id": {
+              "type": "string",
+              "description": "**参数解释**： 屏蔽规则ID,可选。 **约束限制**： 不涉及。 **取值范围**： 以nm开头，后跟[0,62]个英文或数字。 **默认取值**： 不涉及。"
+            },
+            "mask_name": {
+              "type": "string",
+              "description": "**参数解释**： 屏蔽规则名称,可选。 **约束限制**： 不涉及。 **取值范围**： 只能为字母、数字、汉字、-、_，长度为[1,64]个字符。 **默认取值**： 不涉及。"
+            },
+            "mask_status": {
+              "type": "string",
+              "description": "**参数解释**： 屏蔽状态,可选。 **约束限制**： 不涉及。 **取值范围**： - MASK_EFFECTIVE：已生效。 - MASK_INEFFECTIVE：未生效。 **默认取值**： 不涉及。"
+            },
+            "resource_id": {
+              "type": "string",
+              "description": "**参数解释**： 资源维度值,提供一个维度的资源ID即可,可选 **约束限制**： 不涉及。 **取值范围**： 长度为[1,700]个字符。 **默认取值**： 不涉及。"
+            },
+            "namespace": {
+              "type": "string",
+              "description": "**参数解释**： 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)。 **约束限制**： 不涉及。 **取值范围**： 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。 **默认取值**： 不涉及。"
+            },
+            "dimensions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "**参数解释** 资源维度名称，如：弹性云服务器，则维度为instance_id；各服务资源的维度名称，请参阅具体云服务的文档。您可以直接从[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg)页面导航至相应文档。 **约束限制** 不涉及 **取值范围** 由字母开头，后面可以包含字母、数字、_或-，长度为[1,32]个字符 **默认取值** 不涉及"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "**参数解释** 资源维度值，为资源的实例ID，如：4270ff17-aba3-4138-89fa-820594c39755。 **约束限制** 不涉及 **取值范围** 长度为[1,256]个字符 **默认取值** 不涉及"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "value"
+                ]
+              },
+              "description": "**参数解释**： 资源的维度信息 **约束限制**： 包含的维度信息数量为[1,4]个。"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "relation_type",
+            "relation_ids"
+          ],
+          "description": "Body of the ListNotificationMasksRequest"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "body"
+      ]
+    }
+  },
+  {
+    "name": "ListNotificationMaskResources",
+    "api_version": "v2",
+    "sdk_method": "list_notification_mask_resources",
+    "request_class": "ListNotificationMaskResourcesRequest",
+    "description": "查询告警通知屏蔽资源列表（只读查询）",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_REGION."
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overrides HUAWEI_PROJECT_ID."
+        },
+        "notification_mask_id": {
+          "type": "string",
+          "description": "**参数解释**： 屏蔽规则ID。    **约束限制**： 不涉及。 **取值范围**： 只能包含字母、数字，长度为[1,64]个字符。           **默认取值**： 不涉及。"
+        },
+        "offset": {
+          "type": "integer",
+          "description": "**参数解释**： 分页偏移量 **约束限制**： 不涉及 **取值范围**： 整数，[0,10000] **默认取值**： 0"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "**参数解释**： 分页大小 **约束限制**： 不涉及 **取值范围**： 整数，[1,100] **默认取值**： 100"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "notification_mask_id"
+      ]
+    }
+  }
+]
